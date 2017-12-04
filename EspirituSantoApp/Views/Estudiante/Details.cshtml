@@ -1,0 +1,74 @@
+﻿@model EspirituSantoApp.Models.Estudiante
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Estudiante</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_Apellidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_Apellidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_DNI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_DNI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_FechaNac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_FechaNac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Est_Genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Est_Genero)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Est_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

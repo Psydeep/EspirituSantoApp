@@ -1,0 +1,90 @@
+﻿@model EspirituSantoApp.Models.Estudiante
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Estudiante</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.Est_ID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Est_Apellidos, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Est_Apellidos)
+                @Html.ValidationMessageFor(model => model.Est_Apellidos)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Est_Nombres, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Est_Nombres)
+                @Html.ValidationMessageFor(model => model.Est_Nombres)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Est_Direccion, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Est_Direccion)
+                @Html.ValidationMessageFor(model => model.Est_Direccion)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Est_Telefono, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Est_Telefono)
+                @Html.ValidationMessageFor(model => model.Est_Telefono)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Est_DNI, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Est_DNI)
+                @Html.ValidationMessageFor(model => model.Est_DNI)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Est_FechaNac, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Est_FechaNac)
+                @Html.ValidationMessageFor(model => model.Est_FechaNac)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Est_Genero, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Est_Genero)
+                @Html.ValidationMessageFor(model => model.Est_Genero)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

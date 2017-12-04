@@ -1,0 +1,50 @@
+﻿@model EspirituSantoApp.Models.Matricula
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Matricula</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cronograma.Cron_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cronograma.Cron_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estudiante.Est_Apellidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estudiante.Est_Apellidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mat_fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mat_fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cur_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cur_ID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Mat_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

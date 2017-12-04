@@ -1,0 +1,26 @@
+﻿@model EspirituSantoApp.Models.Aula
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Aula</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Aula_Num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aula_Num)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Aula_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

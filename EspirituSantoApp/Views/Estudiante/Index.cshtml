@@ -1,0 +1,69 @@
+﻿@model IEnumerable<EspirituSantoApp.Models.Estudiante>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Est_Apellidos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Est_Nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Est_Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Est_Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Est_DNI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Est_FechaNac)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Est_Genero)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Est_Apellidos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Est_Nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Est_Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Est_Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Est_DNI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Est_FechaNac)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Est_Genero)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Est_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Est_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Est_ID })
+        </td>
+    </tr>
+}
+
+</table>

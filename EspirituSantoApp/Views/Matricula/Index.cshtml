@@ -1,0 +1,51 @@
+﻿@model IEnumerable<EspirituSantoApp.Models.Matricula>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cronograma.Cron_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estudiante.Est_Apellidos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mat_fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cur_ID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cronograma.Cron_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estudiante.Est_Apellidos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mat_fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cur_ID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Mat_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Mat_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Mat_ID })
+        </td>
+    </tr>
+}
+
+</table>
