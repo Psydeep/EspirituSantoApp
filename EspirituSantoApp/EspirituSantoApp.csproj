@@ -195,7 +195,7 @@
     <Compile Include="Models\Matricula.cs" />
     <Compile Include="Controllers\MatriculaController.cs" />
     <Compile Include="Models\RoleView.cs" />
-    <Compile Include="Models\UsereView.cs" />
+    <Compile Include="Models\UserView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
